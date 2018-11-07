@@ -46,11 +46,11 @@ Agreguen a sus compañeras y a nosotras, vean los distintos repos, hagan fork, h
 Truquito: si ponen una @ antes de su nombre de usuario, github hace el link automáticamente 
 
 Michelle Mullett
-> @Michelle-M
+@Michelle-M
 
 Marianela 
-> @mgambina
+@mgambina
 
 Yamila
-> @YamLapin
+@YamLapin
 
