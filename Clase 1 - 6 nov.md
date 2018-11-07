@@ -52,6 +52,9 @@ Marianela
 Yamila
 > https://github.com/YamLapin
 
+Aldi Lafuente
+> https://github.com/aldilafuente
+
 Natalia Hernández 
 > https://github.com/NatiHernandez
 
@@ -63,6 +66,4 @@ Cata
 
 Maru!
 > https://github.com/maruucomerci
-
-
 
