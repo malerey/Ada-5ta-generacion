@@ -41,5 +41,8 @@ Agreguen a sus compañeras y a nosotras, vean los distintos repos, hagan fork, h
 
 ## Usuarios de Github
 
-- Habra premio especial (comida!) para quienes hagan un pull request de este repo, y agreguen aqui abajo su nombre y su usuario de Guthub asi pueden agregarlas sus compañeras y nosotras. 
+- Habra premio especial (comida!) para quienes hagan un pull request de este repo, y agreguen aqui abajo su nombre y su usuario de Guthub asi pueden agregarlas sus compañeras y nosotras.
+
+Michelle Mullett
+> [https://github.com/Michelle-M]
 
