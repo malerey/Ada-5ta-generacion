@@ -54,3 +54,16 @@ Yamila
 
 Aldi Lafuente
 > https://github.com/aldilafuente
+
+Natalia Hernández 
+> https://github.com/NatiHernandez
+
+Vicki
+> https://github.com/mermadly
+
+Cata
+> https://github.com/catalinasy
+
+Maru!
+> https://github.com/maruucomerci
+
