@@ -39,5 +39,7 @@ Si tienen un rato libre, les recomendamos seguir jugando con github.
 Agreguen a sus compañeras y a nosotras, vean los distintos repos, hagan fork, hagan pull request. 
 *¡No tengan miedo de romper nada!*
 
-Mas abajo iré poniendo los usuarios de sus compañeras así se van agregando entre sí. 
+## Usuarios de Github
+
+- Habra premio especial (comida!) para quienes hagan un pull request de este repo, y agreguen aqui abajo su nombre y su usuario de Guthub asi pueden agregarlas sus compañeras y nosotras. 
 
