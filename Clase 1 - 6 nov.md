@@ -52,3 +52,5 @@ Marianela
 Yamila
 > https://github.com/YamLapin
 
+Aldi Lafuente
+> https://github.com/aldilafuente
