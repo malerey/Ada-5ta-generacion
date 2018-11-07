@@ -43,14 +43,12 @@ Agreguen a sus compañeras y a nosotras, vean los distintos repos, hagan fork, h
 
 - Habra premio especial (comida!) para quienes hagan un pull request de este repo, y agreguen aqui abajo su nombre y su usuario de Guthub asi pueden agregarlas sus compañeras y nosotras.
 
-Truquito: si ponen una @ antes de su nombre de usuario, github hace el link automáticamente 
-
 Michelle Mullett
-@Michelle-M
+> https://github.com/Michelle-M
 
 Marianela 
-@mgambina
+> https://github.com/mgambina
 
 Yamila
-@YamLapin
+> https://github.com/YamLapin
 
