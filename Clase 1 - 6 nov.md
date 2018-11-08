@@ -96,3 +96,10 @@ Cecilia
 
 Flor
 > https://github.com/florhollmann
+
+Lourdes Ramirez
+https://github.com/Lou80
+
+Agostina
+> https://github.com/agosgal
+
