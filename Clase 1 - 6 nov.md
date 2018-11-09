@@ -103,3 +103,5 @@ https://github.com/Lou80
 Agostina
 > https://github.com/agosgal
 
+Pamela Aurora
+> https://github.com/aurorapamela
