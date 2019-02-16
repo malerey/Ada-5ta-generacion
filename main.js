@@ -1,32 +1,30 @@
-
-// Ejercicio 69
-// Crear un documento con el nombre ej69.js
-// Mostrar en consola la suma parcial de todos los números que van desde 0 hasta 1000 utilizando la estructura while.
+// metodos avanzados
+// de array
 
 
+// var array = [1, 2, 3, 4]
 
+// var nuevoArray = array.forEach(function(param){
+// return param 
+// }); 
 
-
-// (0) + 1 = 1
-// (0 + 1) + 2 = 3
-// (0 + 1 + 2) + 3 = 6
-// (0 + 1 + 2 + 3) + 4 = 10
-// (0 + 1 + 2 + 3 + 4) + 5 = 15
-
-
-
-// 0 + 1 = 1
-// 1 + 2 = 3
-// 3 + 3 = 6
-// 6 + 4 = 10
-// 10 + 5 = 15
+// console.log(array)
+// console.log(nuevoArray())
 
 
 
 
 
 
-// inicio de la serie + incremento de 1 = total
+
+// sintaxis
+
+// nombre del array 
+// punto
+// nombre del metodo
+// parentesis
+// funcion (parametros)
+// parametros de la funcion
 
 
 
@@ -41,339 +39,190 @@
 
 
 
-// var total = 0
-// var incremento = 1
+// ForEach
+// recorrer un array 
+// acepta una función como parámetro
+// La función que pasamos a este método 
+// recibe como parámetro 
+// cada uno de los elementos del array
 
-// while (incremento < 10) {
-//   console.log(total, incremento, total + incremento)
-//   total = total + incremento
-//   incremento++
+// var alumnos = ['nico', 'pedro', 'marta', 'belen', 'emilia'];
+
+// alumnos.forEach(function(alumno) {
+//   console.log(alumno);
+// });
+
+
+
+
+
+
+
+// sintaxis
+
+
+
+
+
+// var alumnos = ['nico', 'pedro', 'marta', 'belen', 'emilia'];
+
+// alumnos.forEach(function (alumno) {
+//   var iniciales = (alumno.charAt(0)).toUpperCase();
+//   var nombres = alumno.slice(1, alumno.length);
+//   console.log(iniciales + nombres);
+// });
+
+
+
+// forEach(function(valorDelElemento, index, arr)	{
+// valorDelElemento	obligatorio
+// index	opcional
+// arr	opcional
 // }
+// )
 
-
-
-
-
-
-
-
-
-
-
-
-// Ejercicio 70
-// Mostrar en consola la suma parcial de 
-// todos los números impares que van desde 
-// 0 hasta 1000 utilizando la estructura while.
-
-// var total = 0
-// var incremento = 1
-
-// while (incremento < 100) {
-//   console.log(total, incremento, total + incremento)
-//   total = total + incremento
-//   incremento = incremento + 2
-// }
-
-
-
-
-
-
-
-
-
-// Ejercicio 71
-// Mostrar en consola la tabla de multiplicar del 9 
-
-
-// var numero = 1
-// var incremento = 9
-
-// while (numero <= 10) {
-//   console.log(numero*incremento)
-//   numero++
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-// Ejercicio 72
-// Crear un documento con el nombre ej72.js
-// Mostrar en consola el siguiente
-// dibujo utilizando la estructura while
-// *
-// **
-// ***
-// ****
-// *****
-// ******
-// *******
-// ********
-// *********
-// **********
-// ***********
-// ************
-// *************
-
-
-
-// ---> primera intuicion:
-// var f = "*"
-// while ( f.length < 15) {
-//  f = f+f
-// }
-// ------- > 
-// *
-// **
-// ****
-// ********
-// ****************
-
-
-
-
-// var f = "*";
-// var f2 = "*";
-// while (f.length < 15) {
-//   console.log(f)
-//   f = f + f2
-// }
-
-
-
-
-
-// var f = "*";
-// var f2 = "*";
-// while (f.length < 15) {
-//   console.log(f)
-//  f = f.concat(f2)
-// }
-
-
-
-// var numero = 1;
-// var f = "*";
-// while (numero <= 13) {
-  //  console.log(f);
-//  f += "*";
-// //  // // // f = f + "*"
-//     numero++;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Ejercicio 73
-// Crear un documento con el nombre ej73.js
-// Mostrar en consola el siguiente dibujo utilizando la estructura while
-// *************
-// ************
-// ***********
-// **********
-// *********
-// ********
-// *******
-// ******
-// *****
-// ****
-// ***
-// **
-// *
-
-
-// var contador = 5;
-// var acumulado = "";
-// var estrellita = "******";
-
-// while (contador>0) {
-//    acumulado = estrellita.slice(0,contador);
-//    console.log(acumulado);
-//    contador--;
-// }
-
-// var numero = 0;
-// var linea = "*************";
-
-// while (numero < linea.length) {
-//   var substring = linea.substring(numero);
-//   console.log(substring, substring.length)
-//   numero++;
-// } 
-
-
-
-
-
-
-
-
-
-
-
-// var a = "";
-// var base = 5;
-// var resta = 5;
-
-// while (base > 0) {
-//   while (resta > 0) {
-//     a = a + "*"
-//     resta--
-//   }
+// var alumnos = ['nico', 'pedro', 'marta', 'belen', 'emilia'];
+// alumnos.forEach(function(a, b, c) {
 //   console.log(a)
-//   resta = base - 1
-//   a = ""
-//   base--
-// }
-
-
-
-
-
-
-
-
-// Ejercicio 74
-// *
-// ***
-// *****
-// *******
-// *********
-// ***********
-// *************
-
-// var numero = 1;
-// var items = "**";
-// var linea = "*";
-
-// while (numero < 7) {
-//   console.log(linea);
-//     linea += item;
-//     numero++;
-// }
-
-
-
-
-
-
-// Ejercicio 75
-// Fibonacci
-
-
-
-
-
-// 0 1 1 2 3 5 8 13 
-
-
-
-
-
-
-
-// var a = 0
-// var b = 1
-// var c = 1
-
-
-// while (a<100) {
-//   console.log(a)
-//   a = b
-//   b = c
-//   c = a+b
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// do/while
-// siempre se ejecuta al menos una vez y luego pregunta por la condición
-// Ejemplo:
-
-// do {
-//   // esto se ejecuta al menos una vez
-// } while (condicion)
-
-
-// var numero = 1000;
-
-// do {
-//   console.log('número: ', numero);
-//   numero++;
-// } while (numero < 10)
-
-
-
-
-// ejercicio 67
-// Mostrar en consola los números del 
-// 100 al 0 utilizando la estructura do/while
-
-
-
-
-
-
-// for
-// Consiste en 3 partes delimitadas por un ;
-// Ejemplo:
-
-// for (iniciarVariable; condicion; alteración) {
-//   // se ejecuta siempre y cuando se cumpla la condición
-// }
-
-// Primero: declaramos la variable numero y le asignamos el valor 0
-// Segundo: escribimos la condición que queremos validar
-// Terceo: incrementamos el valor de la variable numero en 1
-
-
-// for (var numero = 0; numero <= 10; numero++) {
-//   console.log(numero);
-// }
-
-
-
-//ejercicio 96
-// Mostrar en consola los números 
-// de 10 en 10 desde el 0 hasta el 10000
-
-
-
-//break en estricturas de repeticion
-// for (var i = 0; i < 1000; i++){
-//   if (i < 10) {
-//     console.log(i);
-//   } else {
-//     break;
+//   console.log(b)
+//   console.log(c)
+// })
+
+
+// var numeros = ['1', '2', '3', '4', '5', '6'];
+// numeros.forEach(function(numero, i) {
+//   if (i%2 !== 0) {
+//     console.log(numero)
 //   }
+// })
+
+
+// var array = ["Malena", "Maria", "Jimena"]
+// array.forEach(function(elemento, i, array) {
+//   return document.write("<br>"+a)
+// })
+
+
+
+
+
+
+
+// var mascotas = ['Amelia', 'Ciro', 'Ulises', 'Carlos'];
+// var mascotasMayuscula = mascotas.map(function(mascota) {
+//   return mascota.toUpperCase()
+// });
+
+// // El array original queda intacto
+// console.log(mascotasMayuscula) // [ 'AMELIA', 'CIRO', 'ULISES', 'CARLOS' ] Todos en mayúscula
+// console.log(mascotas) // ['Amelia', 'Ciro', 'Ulises', 'Carlos'] Este array quedó igual que antes
+
+// OJO!!
+// Si la funcion no retorna nada
+// El array nuevo quedara vacio!!
+
+
+
+// var mascotas = ['Amelia', 'Ciro', 'Ulises', 'Carlos'];
+// var mascotasMayuscula = mascotas.map(function(mascota) {
+//   return mascota.toUpperCase()
+// });
+
+// console.log(mascotasMayuscula)
+
+
+
+
+// // El array original queda intacto
+// console.log(mascotasMayuscula) // undefined
+// console.log(mascotas) // ['Amelia', 'Ciro', 'Ulises', 'Carlos'] Este array quedó igual que antes
+
+// Recibe los mismos parametros que forEach
+
+// map(function(valorDelElemento, index, arr)	{
+// valorDelElemento	obligatorio
+// index	opcional
+// arr	opcional
 // }
+// )
+
+// var alumnos = ['nico', 'pedro', 'marta', 'belen', 'emilia'];
+// var nuevoArray = alumnos.map(function(a, b, c) {
+//   return a + b + c
+// })
+
+// console.log(nuevoArray)
+
+
+
+
+
+
+
+// filter() 
+// crea un array
+// a partir de una funcion
+// que se pasa como "test"
+// a cada uno de los elementos
+// del array original
+
+// var edades = [10, 12, 88, 32, 55, 67, 92, 20]
+
+// var mayoresDeEdad = edades.filter(function(edad) {
+//   if (edad >= 18) {
+//     return edad
+//   }
+  
+// })
+
+// console.log(mayoresDeEdad)
+
+
+
+
+// Reduce
+// recorrer un array y obtener 
+// un sólo dato como resultado final
+// Acepta una función con dos parámetros
+// Primer parámetro es el total
+// (el valor acumulado en cada vuelta)
+// El segundo valor es cada item en el array
+// solo sirve para numeros
+
+
+var notas = [1, 2, 3, 4, 10, 5];
+var sumaDeNotas = notas.reduce(function(total, nota) {
+  return total + nota;
+});
+
+console.log(sumaDeNotas); // 25 resultado final de sumar todas las notas
+
+
+
+
+
+
+// var notas = [1, 10, 20];
+// var sumaDeNotas = notas.reduce(function(total, nota) {
+//   return total * nota;
+// });
+
+// console.log(sumaDeNotas); //200
+
+//puede recibir dos parametros mas
+// el indice, y el array
+
+
+// reemplaza este codigo
+// let calorias = [800, 200, 100, 300, 700];
+// let total = 0;
+// for (let i = 0; i< calorias.length; i++){
+//   total = total + calorias[i] 
+// }
+// console.log(total)
+
+// let calorias = [800, 200, 100, 300, 700];
+// let sumaDeTodo = calorias.reduce(function(total, item){
+//   return total + item;
+// });
+// console.log(sumaDeTodo)
