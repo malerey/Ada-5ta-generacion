@@ -1,0 +1,19 @@
+.rojo {
+	color: red;
+}
+
+.azul {
+	color: blue;
+}
+
+.negrita {
+	font-weight: bold;
+}
+
+#principal {
+	font-size: 25px;
+}
+
+.verde {
+	color: green;
+}
