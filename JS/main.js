@@ -1,4 +1,100 @@
 
+var local = {
+    vendedoras: ["Ada", "Grace", "Hedy", "Sheryl"],
+
+    ventas: [
+        { fecha: new Date(2019, 1, 4), nombreVendedora: "Grace", componentes: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
+        { fecha: new Date(2019, 0, 1), nombreVendedora: "Ada", componentes: ["Monitor GPRS 3000", "Motherboard ASUS 1500"] },
+        { fecha: new Date(2019, 0, 2), nombreVendedora: "Grace", componentes: ["Monitor ASC 543", "Motherboard MZI"] },
+        { fecha: new Date(2019, 0, 10), nombreVendedora: "Ada", componentes: ["Monitor ASC 543", "Motherboard ASUS 1200"] },
+        { fecha: new Date(2019, 0, 12), nombreVendedora: "Grace", componentes: ["Monitor GPRS 3000", "Motherboard ASUS 1200"] }
+    ],
+
+    precios: [
+        { componente: "Monitor GPRS 3000", precio: 200 },
+        { componente: "Motherboard ASUS 1500", precio: 120 },
+        { componente: "Monitor ASC 543", precio: 250 },
+        { componente: "Motherboard ASUS 1200", precio: 100 },
+        { componente: "Motherboard MZI", precio: 30 },
+        { componente: "HDD Toyiva", precio: 90 },
+        { componente: "HDD Wezter Dishital", precio: 75 },
+        { componente: "RAM Quinston", precio: 110 },
+        { componente: "RAM Quinston Fury", precio: 230 }
+    ]
+};
+
+function precioMaquina(componentes) {
+    var precioTotal = 0;
+
+    for (var i = 0; i < componentes.length; i++) {
+
+        for (var j = 0; j < local.precios.length; j++) {
+
+            if (local.precios[j].componente === componentes[i]) {
+                precioTotal += local.precios[j].precio;
+
+            }
+        }
+
+    }
+    return precioTotal;
+}
+
+
+
+function ventasMes(mes, anio) {
+    var ventasDelMes = 0;
+
+    for (var i = 0; i < local.ventas.length; i++) {
+
+        var month = local.ventas[i].fecha.getMonth();
+        var year = local.ventas[i].fecha.getFullYear();
+
+        if (month + 1 === mes && year === anio) {
+            ventasDelMes += precioMaquina(local.ventas[i].componentes)
+        }
+    }
+    return ventasDelMes;
+}
+
+
+function renderPorMes() {
+ var arrayTodo = [];
+
+ for (var i = 0; i < local.ventas.length; i++) {
+   var objetoNuevo = {
+     mes: local.ventas[i].fecha.getMonth() + 1,
+     anio: local.ventas[i].fecha.getFullYear(),
+   }
+   objetoNuevo.vendido = ventasMes(objetoNuevo.mes, objetoNuevo.anio)
+
+   var encontrado = false;
+   for (var j = 0; j < arrayTodo.length; j++) {
+     // aca comparo objetoNuevo con el elemento que estoy iterando de arrayTodo
+     if (objetoNuevo.mes === arrayTodo[j].mes && objetoNuevo.anio === arrayTodo[j].anio) {
+       encontrado = true;
+     }
+   }
+   if (encontrado!=true){
+   arrayTodo.push(objetoNuevo)
+   }
+ }
+
+
+arrayTodo.sort(function(a, b) {
+  return a.mes - b.mes;
+});
+
+return arrayTodo
+
+ // return ‘Ventas por mes: ‘+’\n’+‘Total de ‘+ arrayTodo[0].mes + ’ ' +arrayTodo[0].anio + ‘: ’ + arrayTodo[0].vendido + ‘\n’+‘Total de ’ + arrayTodo[1].mes+ ' ' +arrayTodo[1].anio + ‘: ’ + arrayTodo[1].vendido
+ // return ‘Ventas por mes: ‘+’\n’+‘Total de enero 2019:‘+arrayTodo[1].vendido+‘\n’+‘Total de febrero 2019: ’+arrayTodo[0].vendido
+}
+console.log(renderPorMes());
+
+
+
+
 
 // // Propiedades dinámicas
 // // Podemos acceder a las propiedades 
