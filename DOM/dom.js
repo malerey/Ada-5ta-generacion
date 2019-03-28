@@ -1,18 +1,23 @@
-// ONLOAD 
 
-//   function saludar () {
-//   console.log('hola mundo!');
+
+// function staircase (n) {
+  
+//   for (var i = 1; i <= n; i++) {
+//     var row = '';
+    
+//     for (var j = 1; j <= (n - i); j++) {
+//       row += ' ';
+//     }
+    
+//     for (var k = 1; k <= i; k++) {
+//       row += '#';
+//     }
+    
+//     console.log(row);
+//   }
 // }
 
-
-
-
-
-
-
-
-
-
+// staircase(5);
 // SELECTORES
 
 // Para poder interactuar con los elementos del DOM
@@ -179,12 +184,17 @@
 
 // Relación entre elementos
 
-// Padres / Hijos 
+// // Padres / Hijos 
 
-// Un elemento que contiene otros elementos se considera como un elemento padre de los elementos que contiene
-// Un elemento que esta dentro de otro elemento se considera hijo del elemento que lo contiene
-// Por medio de el atributo parentElement podemos acceder al elemento padre del elemento seleccionado
-// Con el atributo children podemos acceder a la colección de elementos hijos de un elemento
+// // Un elemento que contiene otros elementos 
+// se considera como un elemento padre de los 
+// elementos que contiene
+// // Un elemento que esta dentro de otro elemento 
+// se considera hijo del elemento que lo contiene
+// // Por medio de el atributo parentElement podemos
+//  acceder al elemento padre del elemento seleccionado
+// // Con el atributo children podemos acceder a la 
+// colección de elementos hijos de un elemento
 // Ejemplo:
 
 // <div>
@@ -192,6 +202,7 @@
 //   <p>Elemento hijo</p>
 //   <p>Elemento hijo</p>
 // </div>
+
 // var div = document.querySelector('div');
 // var parrafos = div.children; // obtengo la colección de elementos hijo
 
@@ -202,10 +213,13 @@
 
 
 // // Hermanos 
-// // Podemos acceder al elemento que está antes que el elemento seleccionado utilizando la propiedad previousElementSibling
-// // También podemos acceder al elemento que sigue gracias a la propiedad nextElementSibling
+// // Podemos acceder al elemento 
+// que está antes que el elemento seleccionado 
+// utilizando la propiedad previousElementSibling
+// // // También podemos acceder al elemento
+//  que sigue gracias a la propiedad nextElementSibling
 
-// // Ejemplo:
+// Ejemplo:
 
 // var parrafos = document.querySelectorAll('p');
 // parrafos[1].previousElementSibling; // De esta forma accedemos al primer párrafo parrafos[0]
@@ -221,13 +235,15 @@
 
 
 
-// // Modificar el contenido de un elemento
+// Modificar el contenido de un elemento
 
-// // Los elementos tienen un atributo llamado innerText que nos permite leer o escribir contenido en modo de texto
+// Los elementos tienen un atributo llamado 
+// innerText que nos permite leer o escribir 
+// contenido en modo de texto
 // var parrafo = document.querySelector('p');
 // parrafo.innerText; // Elemento hijo 1 
 // console.log(parrafo.innerText)
-// // parrafo.innerText = 'Asi cambiamos el valor del texto un elemento';
+// parrafo.innerText = 'Asi cambiamos el valor del texto un elemento';
 
 // // Funciones similares son textContent y innerHTML
 
@@ -236,8 +252,18 @@
 
 
 
-// InnerHTML tambien nos permite agregar etiquetas de HTML 
+// // InnerHTML tambien nos permite agregar etiquetas de HTML 
 // parrafo.innerHTML = '<ul><li>Lo convierto en lista</li></ul>';
+
+
+
+// var parrafos = document.querySelectorAll("p")
+// parrafos[0].innerHTML = "soy la mas capa de javascript"
+
+
+// for (var i = 0; i < parrafos.length; i++) {
+// 	parrafos[i].innerHTML = "ahora si soy la mas capa"
+// }
 
 
 
@@ -249,9 +275,14 @@
 
 
 // // Manejo de propiedades de CSS
-// // Los elementos HTML tienen una propiedad llamada style que retorna un objeto literal que representa los estilos que tiene un objeto
-// // Los nombres de las propiedades de CSS en ECMAScript se escriben con el siguiente formato: nombreDePropiedadDeCss
-// // Por ejemplo la propiedad de CSS background-color se escribe como backgroundColor
+// // Los elementos HTML tienen una propiedad 
+// llamada style que retorna un objeto literal
+//  que representa los estilos que tiene un objeto
+// // Los nombres de las propiedades de CSS en 
+// ECMAScript se escriben con el siguiente formato: 
+// nombreDePropiedadDeCss
+// // Por ejemplo la propiedad de CSS background-color
+//  se escribe como backgroundColor
 // // Ejemplo:
 
 
@@ -259,10 +290,11 @@
 // elemento.style; // {}
 // elemento.style.color = 'red'; // seteo el color a rojo
 // elemento.style.fontWeight = 'bold'; //seteo el weight a bold
+// elemento.style.fontSize = '60px'
+// elemento.style.border = "3px solid green"
 
-
-// // Ejercicio 11 
-// // https://github.com/Ada-IT/bootcamp-frontend/blob/master/javascript/dom/ejercicios/011.md
+// // // Ejercicio 11 
+// // // https://github.com/Ada-IT/bootcamp-frontend/blob/master/javascript/dom/ejercicios/011.md
 
 
 
@@ -275,25 +307,37 @@
 // // Read
 // // Update
 // // Delete
-// // Esto significa que podemos crear, actualizar y borrar un elemento
+// // Esto significa que podemos crear, 
+// actualizar y borrar un elemento
+
+
+
 
 
 
 
 
 // Crear un elemento
-// El objeto document tienen un método llamado createElement que nos permite crear nuevos nodos elementos HTML
-// createElement acepta como parámetro un string con el nombre de una etiqueta de HTML (a, div, span, li, ul, etc)
+// El objeto document tienen un método 
+//llamado createElement que nos permite crear 
+//nuevos nodos elementos HTML
+// createElement acepta como parámetro un string 
+//con el nombre de una etiqueta de HTML 
+//(a, div, span, li, ul, etc)
 // Ejemplo:
 
 // var nuevoElemento = document.createElement('p');
 
 
 
-// // Insertar un elemento
-// // Los objetos tienen un método llamado appendChild que nos permite insertar un nodo dentro del otro
-// // Este método inserta el nuevo nodo como último nodo hijo del nodo contenedor
-// // Ejemplo:
+
+// Insertar un elemento
+// Los objetos tienen un método 
+//llamado appendChild que nos permite insertar 
+//un nodo dentro del otro
+// Este método inserta el nuevo nodo como último 
+//nodo hijo del nodo contenedor
+// Ejemplo:
 
 // var parrafo = document.createElement('p');
 // parrafo.textContent = 'Hola soy un parrafo';
@@ -332,22 +376,23 @@
 
 // // Eventos
 
-// // Un evento consta de las siguientes partes:
 
-// // Tipo de Evento: es el nombre del evento que ocurre
-// // Target del evento: es el objeto al cual le ocurre el evento o que está asociado a dicho evento
-// // Manejador de evento: es una función (callback) que maneja o responde a un evento (Se lo conoce también como listener)
-// // Objeto del evento: es un objecto asociado con un evento en particular que contiene detalles sobre el evento. 
-// // Este objeto es pasado como parámetro de la función que maneja el evento. 
-// // Las propiedades de este objeto cambian según el tipo de evento que sea. 
-// // Ejemplo: puedo saber que tecla se presiona o posición del mouse dependiendo del tipo de evento que maneje.
-
-
+// Lista de eventos que se pueden utilizar:
+// Existen muchos eventos que podemos utilizar para crear UI interactivas:
+// onchange
+// onclick / ondblclick / onmousedown / onmousedown
+// onmouseover / onmouseout
+// onkeydown / onkeypress / onkeyup
+// onload
+// onresize
+// onscroll
+// oninput
+// onfocus / onblur
 
 
 // // Existen 2 formas básicas de registrar un manejador de eventos
 
-// // Establecer una propiedad en el objeto o document Ejemplo:
+// // Establecer una propiedad en el objeto 
 
 // var button = document.querySelector('button');
 // button.onclick = function() {
@@ -355,10 +400,11 @@
 // }
 
 
-// // La otra opción es registr un evento con addEventListener
+// // La otra opción es registrar un evento con addEventListener
 // // Este método soporta 2 parámetros:
 // // Tipo de evento: es un string con el nombre del tipo de evento
-// // Manejador de evento: es una función que se invoca cuando suceda evento Ejemplo:
+// // Manejador de evento: es una función que se invoca cuando suceda evento
+// Ejemplo:
 // var button = document.querySelector('button');
 // button.addEventListener('click', function() {
 //   // código que maneja el click del botón
@@ -366,9 +412,10 @@
 
 
 // // Dentro de la función que maneja el evento podemos utilizar la palabra reservada this 
-// que en ese contexto hace referencia al objeto que ejecutó el evento Ejemplo:
+// que en ese contexto hace referencia al objeto que ejecutó el evento 
+//Ejemplo:
 // function clickHandler() {
-// 	console.log(this)		// this en este caso apunta al elemento que ejecutó el evento
+// 	console.log(this)		// this apunta al elemento que ejecutó el evento
 // }
 
 // var button = document.querySelector('button');
@@ -377,9 +424,52 @@
 // // Para quitar un listener podemos utilizar removeEventListener
 
 // // function clickHandler() {
-// // 	console.log(this)		// this en este caso apunta al elemento que ejecutó el evento
+// // 	console.log(this)		// this apunta al elemento que ejecutó el evento
 // // }
 
 // // var button = document.querySelector('button');
 // // button.addEventListener('click', clickHandler);
 // // button.removeEventListener('click', clickHandler); 
+
+
+// Por medio del objeto event podemos conocer 
+// más datos sobre el evento o prevenir que se ejecute 
+// el comportamiento por defecto de ejecución
+// Para prevenir la ejecución de un evento por defecto 
+// utilizamos el método preventDefault
+// Ejemplo:
+
+// var hipervinculo = document.querySelector('a');
+// hipervinculo.addEventListener('click', function(evento) {
+//   evento.preventDefault();  // de esta forma prevenimos que el hipervinculo ejecute su función por defecto
+// });
+
+
+// Podemos capturar algunos eventos del mouse,
+//  entre los más conocidos se encuentran: 
+//  click, dblclick, mouseover, mouseout y mousemove
+// El objeto evento asociado al mouse tiene 
+// atributos que nos permite saber la posición 
+// donde se encuentra con clientX y clientY
+// Ejemplo:
+
+// var body = document.querySelector('body');
+// body.addEventListener('click', function(evento) {
+//   evento.clientX;
+//   evento.clientY;
+// });
+
+// También podemos controlar los eventos
+//  que se disparan cuando se presionan las 
+//  teclas por medio de los eventos keypress, keydown y keyup
+// El objeto del evento tiene propiedades como 
+// charCode que nos retorna el número de tecla que fué presionado
+// Con el método String.fromCharCode podemos saber que letra es
+// Ejemplo:
+
+// var body = document.querySelector('body');
+// body.addEventListener('keypress', function(evento) {
+//   evento.charCode;
+//   String.fromCharCode(evento.charCode);
+// });
+
