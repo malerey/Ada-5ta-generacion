@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Adagram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+</head>
+<body>
+	<div class="main">
+		<div class="card">
+			<div class="card-photo">
+				<img src="./cat.jpg">
+			</div>
+			<div onclick="changeTitle(this)" class="card-title">
+				Título
+			</div>
+			<i onclick="like(this)" class="far fa-star"></i>
+			<div onmouseover="changeButton(this)" onmouseout="changeBackButton(this)" class="card-button">
+				Botón
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+function like(id) { 
+  id.classList.toggle("fas")
+}
+
+function changeButton(id) { 
+  id.classList.add("lightcolor")
+  id.classList.add("pointer")
+}
+
+function changeBackButton(id) { 
+  id.classList.remove("lightcolor")
+}
+
+function changeTitle(id) { 
+ var title = prompt("Elegí un nuevo título", "")
+  id.innerHTML = title
+}
+
+</script>
+</html>

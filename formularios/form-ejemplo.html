@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario ejemplo</title>
+</head>
+<body>
+
+	
+	<form action="./ejemplo.html" method="get" name="form_ejemplo">
+
+  	Nombre:
+ 	<input type="text" name="firstname">
+ 	<br/>
+  	<label>Apellido:
+ 		<input type="text" name="lastname">
+ 	</label>
+ 	
+ 	<br/>
+ 	<br/>
+
+	<input type="radio" name="pet" value="cat" checked> Gatos
+	<br>
+	<input type="radio" name="pet" value="dog"> Perros
+	<br>
+	<input type="radio" name="pet" value="other"> Otros
+
+ 	<br/>
+	<br/>
+	
+	Nacionalidad
+	<select name="Nacionalidad">
+	  <option value="arg">Argentina</option>
+	  <option value="peru">Peruana</option>
+	  <option value="vnzl">Venezolana</option>
+	</select>
+ 	
+ 	<br/>
+	<br/>
+	
+	Deja tu mensaje
+	 <br/>
+	<textarea name="message" rows="10" cols="30">
+	Texto de ejemplo
+	</textarea>
+
+ 	<br/>
+	<br/>
+
+	Password: 
+	<br/>
+	<input type="password" name="psw">
+
+	 <br/>
+	<br/>
+	Tipos de input:
+	<a href="https://www.w3schools.com/html/html_form_input_types.asp">
+	https://www.w3schools.com/html/html_form_input_types.asp</a>
+
+
+    <input type="submit" name="submit" value="Enviar" />
+</form>
+
+</body>
+</html>

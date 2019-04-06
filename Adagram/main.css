@@ -1,0 +1,47 @@
+
+.card {
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  width: 400px;
+  height: 350px;
+}
+
+.card-photo {
+  width: 360px;
+}
+
+.card-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: bold;
+  color: #444444;
+}
+
+.card-button {
+  border-radius: 25px;
+  background-color: red;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.lightcolor {
+  background-color: pink !important
+}
+
+.fa-heart {
+  align-self: flex-end;
+  padding-right: 20px
+}
+
+.pointer {
+  cursor: pointer
+}

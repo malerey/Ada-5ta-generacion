@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #1D2B64;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#modalWrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  z-index: 990;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#botonModal {
+  background-color: #1D2B64;
+  border-radius: 3px;
+  color: #F8CDDA;
+  border: none;
+  font-size: 14px;
+}
+
+#botonModal:hover {
+  background-color: rgb(65, 78, 131)
+}
+
+#modalContainer {
+  background-color: #fff;
+  height: 150px;
+  width: 220px;
+  border-radius: 5px;
+}
+
+.displayNone {
+  display: none !important;
+}
+
