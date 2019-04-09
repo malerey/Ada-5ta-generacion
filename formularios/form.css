@@ -1,0 +1,19 @@
+
+
+
+
+
+Tarea: formulario
+
+Input que pida el nombre
+- Si el nombre tiene menos de 3 caracteres, 
+al enviar el formulario se pone rojo
+
+Input que pida un password
+- Si el password tiene menos de 8 caracteres 
+o no tiene ningun numero, al enviar 
+el formulario se pone en rojo
+
+- Select de opciones (mascotas, pokemones, etc)
+Al enviar el form, si esta bien todo, navegamos a
+la opcion seleccionada 
