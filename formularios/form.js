@@ -63,11 +63,12 @@
 // textarea
 // Ejemplo:
 
-// <form action="guardar_usuario.html" method="get" enctype="application/x-www-form-urlencoded" name="login">
-//   <input type="text" id="username" name="username" />
-//   <input type="password" id="pass" name="pass" />
-//   <input type="submit" name="submit" value="Enviar" />
-// </form>
+<form action="guardar_usuario.html" method="get" enctype="application/x-www-form-urlencoded" name="login">
+  <input type="text" id="username" name="username" />
+  <input type="password" id="pass" name="pass" />
+  <input type="submit" name="submit" value="Enviar" />
+</form>
+
 
 
 // var form = document.querySelector('form');
@@ -117,20 +118,20 @@
 
 // //select
 
-// // podemos utilizar la propiedad selectedIndex
-// // retorna el índice numérico de la opción seleccionada
-// // options retorna la colección de elementos options
-// // entre ambos, y con value, podemos obtener
-// // la opcion seleccionada 
-// // Ejemplo:
+// podemos utilizar la propiedad selectedIndex
+// retorna el índice numérico de la opción seleccionada
+// options retorna la colección de elementos options
+// entre ambos, y con value, podemos obtener
+// la opcion seleccionada 
+// Ejemplo:
 
-// // <form action="guardar_usuario.html" method="get" enctype="application/x-www-form-urlencoded" name="login">
-// //   <select name="paises" id="paises">
-// //     <option value="ar">Argentina</option>
-// //     <option value="br">Brasil</option>
-// //     <option value="cl">Chile</option>
-// //   </select>
-// // </form>
+// <form action="guardar_usuario.html" method="get" enctype="application/x-www-form-urlencoded" name="login">
+//   <select name="paises" id="paises">
+//     <option value="ar">Argentina</option>
+//     <option value="br">Brasil</option>
+//     <option value="cl">Chile</option>
+//   </select>
+// </form>
 
 // var form = document.querySelector("form");
 // var select = document.querySelector('select');
@@ -139,16 +140,14 @@
 // form.onsubmit = function(evento) {
 //   evento.preventDefault();
  
-// console.log(select.options);  // retorna la colección de elementos options
-// console.log(select.selectedIndex);  // retorna el índice del valor seleccionado
+// // console.log(select.options);  // retorna la colección de elementos options
+// // console.log(select.selectedIndex);  // retorna el índice del valor seleccionado
 // var indice = select.selectedIndex
 // select.options[indice]; // retorna el option seleccionado
-// console.log(select.options[indice]); // retorna el elemento seleccionado.
-// console.log(select.options[indice].value); // retorna el valor del elemento seleccionado.
+// // console.log(select.options[indice]); // retorna el elemento seleccionado.
+// // console.log(select.options[indice].value); // retorna el valor del elemento seleccionado.
 
 // }
-
-
 
 // checkbox 
 
@@ -162,13 +161,13 @@
 </form> */
 
 
-// var checkboxes = document.querySelector('checkbox');
+// var checkboxes = document.getElementById('check');
 // var gato = checkboxes[0];
 // var perro = checkboxes[1];
 
 // console.log(gato.checked);  // retorna el valor true
-// gato.checked = false; // establece un nuevo valor al elemento.
-// console.log(gato.value); // f
+
+
 
 // perro.checked;  // retorna el valor false
 // perro.checked = true; // establece un nuevo valor al elemento.
@@ -179,10 +178,10 @@
 // para obtener el checkbox seleccionado de la siguiente forma:
 // Ejemplo:
 
-/* <form action="guardar_usuario.html" method="get" enctype="application/x-www-form-urlencoded" name="login">
-  <input type="checkbox" name="pet" value="f" checked> Gato
-  <input type="checkbox" name="pet" value="m"> Perro
-</form> */
+//  <form action="guardar_usuario.html" method="get" enctype="application/x-www-form-urlencoded" name="login">
+//   <input type="checkbox" name="pet" value="f" checked> Gato
+//   <input type="checkbox" name="pet" value="m"> Perro
+// </form> 
 
 // var gato = document.querySelector('input:checked');
 
@@ -196,21 +195,25 @@
 // Eventos en un formulario
 
 // Los elementos del formulario pueden manejar eventos 
-// por medio de los métodos: onfocus, onblur, onchange, oninput
-// También se pueden escribir utilizando el método addEventListener(callback)
-// focus: se dispara al establecer el foco en un elemento
+// por medio de los métodos: onfocus, onblur, 
+// onchange, oninput
+// También se pueden escribir utilizando 
+// el método addEventListener(callback)
+// focus: se dispara al establecer el 
+// foco en un elemento
 // blur: se dispara al remover el foco sobre un elemento
-// change: se dispara cuando cambia el valor de un elementos
+// change: se dispara cuando cambia el 
+// valor de un elementos
 // input: se dispara al ingresar datos a un elemento
 
 
 // Ejemplo:
 
-{/* <form action="guardar_usuario.html" method="get" enctype="application/x-www-form-urlencoded" name="login">
-  <input type="text" id="username" name="username" />
-  <input type="password" id="pass" name="pass" />
-  <input type="submit" name="submit" value="Enviar" />
-</form> */}
+// { <form action="guardar_usuario.html" method="get" enctype="application/x-www-form-urlencoded" name="login">
+//   <input type="text" id="username" name="username" />
+//   <input type="password" id="pass" name="pass" />
+//   <input type="submit" name="submit" value="Enviar" />
+// </form> }
 // var form = document.querySelector('form');
 // var username = form.elements[0];
 
@@ -221,12 +224,13 @@
 
 // username.onblur = function() {
 //   // código que maneja el blur del elemento
-//   console.log('Se perdió el foco del campo username');
+//   console.log('Se perdio el foco del campo username');
 // }
 
-// username.oninput = function(e) {
+// username.oninput = function(event) {
 //   // código que maneja el ingreso de datos a un elemento
-//   console.log('Están cambiaron el valor del campo username');
+
+//   console.log(event.target.value)
 // }
 
 
@@ -279,19 +283,19 @@
   <input type="password" id="pass" name="pass" />
   <input type="submit" name="submit" value="Enviar" />
 </form> */}
-// var form = document.querySelector('form');
+var form = document.querySelector('form');
 
 
-// form.onsubmit = function(evento) {
-//   evento.preventDefault();
-//   var username = form.elements[0];
+form.onsubmit = function(evento) {
+  evento.preventDefault();
+  var username = form.elements[0];
 
-//   if (username.value.length === 0) {
-//     console.log('Username vacio');
-//     return false;
-//   }
-// evento.target.submit()
-// }
+  if (username.value.length === 0) {
+    console.log('Username vacio');
+    return false;
+  }
+  evento.target.submit()
+}
 
 
 
@@ -299,23 +303,3 @@
 // Ejercicios
 // Ejercicio 31
 
-// Hacer un formulario de invitación a un evento. 
-
-// Validarlo en el submit 
-
-// Nombre —> no puede estar vacío
-// Edad ——> debe ser entre 18 y 120 
-// Seleccionar estado civil —> no puede estar vacío 
-// Seleccionar nacionalidad (select, desplegado de opciones) —> no puede estar vacío 
-
-
-// Una vez enviados los datos, en lugar de enviarse a otra web
-// Se imprimen abajo, como una lista de confirmación de asistencia
-
-
-// Invitado {indice} 
-// Nombre: {nombre}
-// Edad: {edad}
-// Estado civil {estado civil}
-// Nacionalidad {nacionalidad}
-// Boton “Eliminar invitado” (Si le hacemos clic, se borra todo)

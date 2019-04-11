@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Form de tarea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./form-tarea.css">
+
+</head>
+<body>
+  
+<h1>Bienvenidos a mi fiesta</h1>
+<h2>Por favor, confirmar asistencia:</h2>
+
+<form class="formulario">
+  Nombre <input type="text"  name="name" id="name">
+  <br/>
+  Edad <input type="number" name="age" id="age">
+  <br/>
+  Estado civil 
+  <div>
+  <input type="radio" name="status" value="single"><span>Quiero conocer gente</span>
+  <input type="radio" name="status" value="taken"><span>No me presenten a nadie</span>
+</div>
+  <br/>
+  Nacionalidad
+  <select  name="nationality" id="nationality">
+    <option value="ar">Argentina</option>
+    <option value="per">Peruana</option>
+    <option value="vnzl">Venezolana</option>
+  </select>
+  <br/>
+  <input type="submit">
+</form>
+
+<div class="lista-de-invitados">
+
+</div>
+  <!-- Hacer un formulario de invitación a un evento. 
+
+Validarlo en el submit 
+
+Nombre —> no puede estar vacío
+Edad ——> debe ser entre 18 y 120 
+Seleccionar estado civil —> no puede estar vacío 
+Seleccionar nacionalidad (select, desplegado de opciones) —> no puede estar vacío 
+
+
+Una vez enviados los datos, 
+en lugar de enviarse a otra web
+Se imprimen abajo, como una 
+lista de confirmación de asistencia
+
+
+Invitado {indice} 
+Nombre: {nombre}
+Edad: {edad}
+Estado civil {estado civil}
+Nacionalidad {nacionalidad}
+Boton "Eliminar invitado"
+ (Si le hacemos clic, se borra todo) -->
+
+
+  <script src="./form-tarea.js"></script>
+</body>
+</html>
