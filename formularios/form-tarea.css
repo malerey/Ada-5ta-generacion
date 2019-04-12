@@ -20,3 +20,23 @@ body {
 .error {
   background-color: red;
 }
+
+.elemento-lista {
+  color: #4b1248;
+  font-family: Verdana;
+  margin: 10px 0;
+  border: 5px solid #4b1248;
+  border-radius: 5px;
+  padding: 0 5px;
+  width: 400px;
+  margin: 20px
+}
+
+.elemento-lista input {
+  border: none;
+  background: none;
+  color: #4b1248;
+  font-family: Verdana;
+  margin: 10px 0;
+  font-size: 16px;
+}
