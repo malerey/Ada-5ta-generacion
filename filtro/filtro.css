@@ -1,0 +1,24 @@
+input {
+  width: 500px;
+  height: 40px;
+  font-size: 18px;
+}
+
+#lista-de-productos {
+  display: flex
+}
+
+.producto {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto img {
+  width: 70%;
+  height: auto
+}

@@ -104,16 +104,37 @@ function agregarInvitado(nombre, edad, estado, nacionalidad) {
     nacionalidad = "Peruana"
   }
 
-var lista = document.getElementById("lista-de-invitados")
 
-var elementoLista = document.createElement("li")
 
-elementoLista.classList.add("elemento-lista")
 
-elementoLista.textContent = "Nombre: " + nombre + ". Edad: " + edad + ". Preferencia: " + estado + ". Nacionalidad: " + nacionalidad
-// elementoLista.innerHTML = "Nombre: " + nombre + ". Edad: " + edad + ". Preferencia: " + estado + ". Nacionalidad: " + nacionalidad
+ document.querySelector("lista")
 
-lista.appendChild(elementoLista)
+ var nuevoArray = [nombre, edad, nacionalidad, estado]
+
+ for (var i = 0; i < nuevoArray.length; i++) {
+   var span = document.createElement("span")
+   span.textContent = nuevoArray[i]
+   lista.appendChild("span")
+ }
+
+
+
+
+
+
+
+
+
+// var lista = document.getElementById("lista-de-invitados")
+
+// var elementoLista = document.createElement("li")
+
+// elementoLista.classList.add("elemento-lista")
+
+// elementoLista.textContent = "Nombre: " + nombre + ". Edad: " + edad + ". Preferencia: " + estado + ". Nacionalidad: " + nacionalidad
+// // elementoLista.innerHTML = "Nombre: " + nombre + ". Edad: " + edad + ". Preferencia: " + estado + ". Nacionalidad: " + nacionalidad
+
+// lista.appendChild(elementoLista)
 
 
 
@@ -160,14 +181,14 @@ botonBorrar.parentNode.remove()
 // elementoLista.classList.add("elemento-lista")
 // lista.appendChild(elementoLista)
 
-// // var spanNombre = document.createElement("span")
-// // var inputNombre = document.createElement("input")
-// // var espacio = document.createElement("br")
-// // spanNombre.textContent = "Nombre: "
-// // inputNombre.value = nombre 
-// // elementoLista.appendChild(spanNombre)
-// // elementoLista.appendChild(inputNombre)
-// // elementoLista.appendChild(espacio)
+// var spanNombre = document.createElement("span")
+// var inputNombre = document.createElement("input")
+// var espacio = document.createElement("br")
+// spanNombre.textContent = "Nombre: "
+// inputNombre.value = nombre 
+// elementoLista.appendChild(spanNombre)
+// elementoLista.appendChild(inputNombre)
+// elementoLista.appendChild(espacio)
 
 
 
