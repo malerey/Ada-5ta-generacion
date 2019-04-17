@@ -85,37 +85,37 @@ if (nombre.length > 0
 
 
 
-function agregarInvitado(nombre, edad, estado, nacionalidad) {
+// function agregarInvitado(nombre, edad, estado, nacionalidad) {
 
-  if (estado === "taken") {
-    estado = "No disponible"
-  }
-  else if (estado === "single") {
-    estado = "Disponible"
-  }
+//   if (estado === "taken") {
+//     estado = "No disponible"
+//   }
+//   else if (estado === "single") {
+//     estado = "Disponible"
+//   }
 
-  if (nacionalidad === "ar") {
-    nacionalidad = "Argentina"
-  }
-  else if (nacionalidad === "vnzl") {
-    nacionalidad = "Venezolana"
-  }
-  else if (nacionalidad === "per") {
-    nacionalidad = "Peruana"
-  }
-
-
+//   if (nacionalidad === "ar") {
+//     nacionalidad = "Argentina"
+//   }
+//   else if (nacionalidad === "vnzl") {
+//     nacionalidad = "Venezolana"
+//   }
+//   else if (nacionalidad === "per") {
+//     nacionalidad = "Peruana"
+//   }
 
 
- document.querySelector("lista")
 
- var nuevoArray = [nombre, edad, nacionalidad, estado]
 
- for (var i = 0; i < nuevoArray.length; i++) {
-   var span = document.createElement("span")
-   span.textContent = nuevoArray[i]
-   lista.appendChild("span")
- }
+//  document.querySelector("lista")
+
+//  var nuevoArray = [nombre, edad, nacionalidad, estado]
+
+//  for (var i = 0; i < nuevoArray.length; i++) {
+//    var span = document.createElement("span")
+//    span.textContent = nuevoArray[i]
+//    lista.appendChild("span")
+//  }
 
 
 
@@ -139,83 +139,20 @@ function agregarInvitado(nombre, edad, estado, nacionalidad) {
 
 
 var botonBorrar = document.createElement("button")
+
+
+
 botonBorrar.textContent = "Eliminar invitado"
 botonBorrar.id = "boton-borrar"
 var corteLinea = document.createElement("br")
 elementoLista.appendChild(corteLinea)
+
+
+
 elementoLista.appendChild(botonBorrar);
 
 
 
-
-
- botonBorrar.onclick = function() {
-// this.parentNode.style.display = 'none';
-botonBorrar.parentNode.remove()
-  }
-}
-
-
-// function agregarInvitado(nombre, edad, estado, nacionalidad) {
-
-//   if (estado === "taken") {
-//     estado = "No disponible"
-//   }
-//   else if (estado === "single") {
-//     estado = "Disponible"
-//   }
-
-//   if (nacionalidad === "ar") {
-//     nacionalidad = "Argentina"
-//   }
-//   else if (nacionalidad === "vnzl") {
-//     nacionalidad = "Venezolana"
-//   }
-//   else if (nacionalidad === "per") {
-//     nacionalidad = "Peruana"
-//   }
-
-// var lista = document.getElementById("lista-de-invitados")
-
-// var elementoLista = document.createElement("div")
-// elementoLista.classList.add("elemento-lista")
-// lista.appendChild(elementoLista)
-
-// var spanNombre = document.createElement("span")
-// var inputNombre = document.createElement("input")
-// var espacio = document.createElement("br")
-// spanNombre.textContent = "Nombre: "
-// inputNombre.value = nombre 
-// elementoLista.appendChild(spanNombre)
-// elementoLista.appendChild(inputNombre)
-// elementoLista.appendChild(espacio)
-
-
-
-
-
-// function crearElemento(descripcion, valor) {
-// var spanNombre = document.createElement("span")
-// var inputNombre = document.createElement("input")
-// var espacio = document.createElement("br")
-// spanNombre.textContent = descripcion + ": "
-// inputNombre.value = valor 
-// elementoLista.appendChild(spanNombre)
-// elementoLista.appendChild(inputNombre)
-// elementoLista.appendChild(espacio)
-// }
-
-// crearElemento("Nombre", nombre)
-// crearElemento("Edad", edad)
-// crearElemento("Nacionalidad", nacionalidad)
-// crearElemento("Estado", estado)
-
-// var botonBorrar = document.createElement("button")
-// botonBorrar.textContent = "Eliminar invitado"
-// botonBorrar.id = "boton-borrar"
-// var corteLinea = document.createElement("br")
-// elementoLista.appendChild(corteLinea)
-// elementoLista.appendChild(botonBorrar);
 
 
 
@@ -225,6 +162,77 @@ botonBorrar.parentNode.remove()
 // botonBorrar.parentNode.remove()
 //   }
 // }
+
+
+function agregarInvitado(nombre, edad, estado, nacionalidad) {
+
+  if (estado === "taken") {
+    estado = "No disponible"
+  }
+  else if (estado === "single") {
+    estado = "Disponible"
+  }
+
+  if (nacionalidad === "ar") {
+    nacionalidad = "Argentina"
+  }
+  else if (nacionalidad === "vnzl") {
+    nacionalidad = "Venezolana"
+  }
+  else if (nacionalidad === "per") {
+    nacionalidad = "Peruana"
+  }
+
+var lista = document.getElementById("lista-de-invitados")
+
+var elementoLista = document.createElement("div")
+elementoLista.classList.add("elemento-lista")
+lista.appendChild(elementoLista)
+
+var spanNombre = document.createElement("span")
+var inputNombre = document.createElement("input")
+var espacio = document.createElement("br")
+spanNombre.textContent = "Nombre: "
+inputNombre.value = nombre 
+elementoLista.appendChild(spanNombre)
+elementoLista.appendChild(inputNombre)
+elementoLista.appendChild(espacio)
+
+
+
+
+
+function crearElemento(descripcion, valor) {
+var spanNombre = document.createElement("span")
+var inputNombre = document.createElement("input")
+var espacio = document.createElement("br")
+spanNombre.textContent = descripcion + ": "
+inputNombre.value = valor 
+elementoLista.appendChild(spanNombre)
+elementoLista.appendChild(inputNombre)
+elementoLista.appendChild(espacio)
+}
+
+crearElemento("Nombre", nombre)
+crearElemento("Edad", edad)
+crearElemento("Nacionalidad", nacionalidad)
+crearElemento("Estado", estado)
+
+var botonBorrar = document.createElement("button")
+botonBorrar.textContent = "Eliminar invitado"
+botonBorrar.id = "boton-borrar"
+var corteLinea = document.createElement("br")
+elementoLista.appendChild(corteLinea)
+elementoLista.appendChild(botonBorrar);
+
+
+
+
+ botonBorrar.onclick = function() {
+// this.parentNode.style.display = 'none';
+botonBorrar.parentNode.remove()
+  }
+}
 
 
 

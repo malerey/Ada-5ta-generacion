@@ -5,11 +5,23 @@ var productos = [
   {nombre: "Zapato azul", tipo: "zapato", color: "azul", img: "./taco-azul.jpg"},
   {nombre: "Bota negra", tipo: "bota", color: "negro", img: "./bota-negra.jpg"},
   {nombre: "Bota azul", tipo: "bota", color: "azul", img: "./bota-azul.jpg"},
+  {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
 ]
+
+
+
+
+
+
 
 // Seleccionamos el listado apenas empezamos, porque
 // queremos tener esta variable disponible en todo nuestro codigo
 var listado = document.getElementById("lista-de-productos")
+
+
+
+
+
 
 // Para mostrarlos, recorremos el listado con un for 
 for (let i = 0; i < productos.length; i++) {
@@ -38,8 +50,15 @@ botonDeFiltro.onclick = function() {
 
   // primero, recorremos con un while todos los "hijos" del listado
   // y los borramos
+
   while (listado.firstChild) {
     listado.removeChild(listado.firstChild);
+}
+
+// despues les toca a uds el resto :)
+
+
+
 }
 
 
@@ -52,4 +71,4 @@ botonDeFiltro.onclick = function() {
 
 // Para puntos extra:
 // Dejar la pagina mas linda con CSS 
-  }
+  
